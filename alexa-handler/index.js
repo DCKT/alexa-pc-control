@@ -57,6 +57,6 @@ app.post('/', function (req, res) {
     })
 })
 
-app.listen(3000, function () {
+app.listen(process.env.ALEXA_HANDLER_PORT || 3000, function () {
   console.log('Development endpoint listening on port 3000!')
 })
