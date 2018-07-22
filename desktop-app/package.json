@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ./ PC-control --platform=win32"
+    "build": "electron-packager ./ PC-control --platform=win32 && electron-installer-zip PC-control-win32-x64 app"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": ["Electron", "quick", "start", "tutorial", "demo"],
@@ -13,6 +13,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",
+    "electron-installer-zip": "^0.1.2",
     "electron-packager": "^12.1.0",
     "eslint-config-dck": "^1.0.4"
   },
