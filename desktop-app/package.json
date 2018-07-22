@@ -1,23 +1,31 @@
 {
-  "name": "electron-quick-start",
+  "name": "alexa-pc-control",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Enable alexa to send command to your computer",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ./ PC-control --platform=win32 && electron-installer-zip PC-control-win32-x64 app"
+    "pack": "electron-builder --dir --win",
+    "dist": "electron-builder --win"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
   "keywords": ["Electron", "quick", "start", "tutorial", "demo"],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",
+    "electron-builder": "^20.24.4",
     "electron-installer-zip": "^0.1.2",
     "electron-packager": "^12.1.0",
+    "electron-winstaller": "^2.6.4",
     "eslint-config-dck": "^1.0.4"
   },
   "dependencies": {
     "ws": "^6.0.0"
+  },
+  "build": {
+    "appId": "com.dck.alexapc",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   }
 }
